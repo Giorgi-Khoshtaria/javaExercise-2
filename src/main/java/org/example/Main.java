@@ -1,17 +1,20 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
   static void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+    User user1 = new User();
+    user1.setAge(15);
+    user1.setPassword("1111");
+    user1.setUsername("giorgi");
+    user1.validateUser();
 
-    for (int i = 1; i <= 5; i++) {
-      //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-      // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-      IO.println("i = " + i);
-    }
+
+    User user2 = new User();
+    user2.setUsername("giorgi");
+    user2.setPassword("123456789");
+    user2.setAge(24);
+    user2.validateUser();
+
+
   }
 }
